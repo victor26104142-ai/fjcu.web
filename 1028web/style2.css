@@ -1,0 +1,136 @@
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body { font-family: "Microsoft JhengHei", sans-serif; display: flex; }
+
+/* ASIDE */
+aside {
+  width: 220px;
+  background: #eee;
+  padding-top: 60px;
+  transition: 0.4s;
+  position: fixed;
+  height: 100vh;
+}
+aside.close {
+  width: 60px;
+}
+aside ul li {
+  list-style: none;
+  padding: 15px;
+  display: flex;
+  align-items: center;
+}
+aside ul li a {
+  text-decoration: none;
+  color: #333;
+  margin-left: 10px;
+}
+.toggleBtn {
+  position: absolute;
+  left: 10px;
+  top: 10px;
+  border: none;
+  background: #ccc;
+  padding: 6px 10px;
+  cursor: pointer;
+}
+
+/* HEADER */
+header {
+  width: 100%;
+  height: 220px;
+  margin-left: 220px;
+  background-image: url("images/bannerbg.jpg");
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-end;
+}
+aside.close + header {
+  margin-left: 60px;
+}
+header .topbar {
+  background: rgba(255,255,255,0.6);
+  padding: 10px;
+}
+
+/* MAIN */
+main {
+  margin-left: 220px;
+  width: 100%;
+  padding: 20px;
+}
+aside.close + header + main {
+  margin-left: 60px;
+}
+
+/* ARTICLE */
+article h1 {
+  font-size: 1.6rem;
+  color: #666699;
+  margin-bottom: 10px;
+}
+article .content {
+  font-size: 1.1rem;
+  color: #7a7a52;
+  margin-bottom: 30px;
+}
+
+/* PRODUCTS */
+.product-area {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+.section1 {
+  width: calc((100% - 40px) / 3);
+  border: 1px solid #ccc;
+  text-align: center;
+  padding: 10px;
+}
+.section1 h2 {
+  font-size: 1.25rem;
+  color: #ff6600;
+  margin-bottom: 8px;
+}
+.section1 img {
+  width: 100%;
+  height: auto;
+  border-bottom: 1px dashed #999;
+  margin-bottom: 10px;
+}
+.section1 .price {
+  font-size: 1.25rem;
+  color: #0099cc;
+}
+
+/* FOOTER */
+footer {
+  width: 100%;
+  background: #333;
+  color: #fff;
+  margin-left: 220px;
+  display: flex;
+  justify-content: space-between;
+  padding: 12px 20px;
+  align-items: center;
+}
+aside.close + header + main + footer {
+  margin-left: 60px;
+}
+footer a {
+  color: #fff;
+  margin: 0 8px;
+}
+
+/* RWD */
+@media (max-width: 768px) {
+  .section1 {
+    width: calc((100% - 20px) / 2);
+  }
+}
+@media (max-width: 480px) {
+  .section1 {
+    width: 100%;
+  }
+}
